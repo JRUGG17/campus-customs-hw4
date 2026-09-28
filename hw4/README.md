@@ -27,7 +27,6 @@ hw4/
 ├── frontend/                React + Vite + TypeScript site
 ├── scripts/                 app check, screenshots, DB evidence, agent measurements
 ├── output/                  write-ups and evidence (see "Deliverables")
-├── screenshots/             Problem 9 and 10 screenshots used by the write-ups
 ├── AI_prompts.md            log of the prompts used to build this
 ├── requirements.txt         Python dependencies
 └── .env.example             placeholder for the API key (copy to .env)
@@ -121,7 +120,7 @@ Run these from `hw4/` while both servers are running.
 | Command | What it does |
 |---|---|
 | `venv/bin/python scripts/app_check.py` | Live test: drives the site, checks answers against the DB, writes `output/app_check.html` + `output/app_check_images/` |
-| `venv/bin/python scripts/screenshots.py problem9` | Retakes screenshots (`problem3` … `problem10`) |
+| `venv/bin/python scripts/screenshots.py problem9` | Takes walkthrough screenshots into `screenshots/` (not committed) |
 | `venv/bin/python scripts/db_evidence.py` | Writes `output/db_writes.md` (users, sessions, saved chats) |
 | `venv/bin/python scripts/measure_agent.py after` | Measures agent effort (model calls, tool calls, tokens, time) |
 

@@ -1,6 +1,6 @@
 # Design: Making It Feel Like the Shop on Broadway
 
-The goal: a storefront that feels like Campus Customs, a family-run Yale shop with a print shop next door, rather than a generic template. Every visual here is HTML/CSS/SVG or a real catalogue photo. Nothing is AI-generated. Screenshots are in `screenshots/problem10/`.
+The goal: a storefront that feels like Campus Customs, a family-run Yale shop with a print shop next door, rather than a generic template. Every visual here is HTML/CSS/SVG or a real catalogue photo. Nothing is AI-generated.
 
 ## What changed and why it helps people stay and buy
 

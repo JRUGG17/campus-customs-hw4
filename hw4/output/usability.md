@@ -2,12 +2,12 @@
 
 Four improvements: two on the front end and two in the agent and backend. Each section says what we added, why it helps a Campus Customs shopper or the business, and how to see it running.
 
-| # | Improvement | Where to see it | Screenshots |
-|---|---|---|---|
-| **F1** | Live search bar in the nav, with a hand-off to the assistant | Top of every page | `screenshots/problem9/F1_*` |
-| **F2** | Category tabs, filters (size in stock, color, price), and sorting | `/products` | `screenshots/problem9/F2_*` |
-| **B1** | Smarter search filters: one search engine for the site *and* the chat | Chat: "hoodies under $60 in M" | `screenshots/problem9/B1_*`, `output/usability_measurements.json` |
-| **B2** | Alternatives when a size is sold out or nothing matches exactly | Chat: "this in large?" on a sold-out size | `screenshots/problem9/B2_*` |
+| # | Improvement | Where to see it |
+|---|---|---|
+| **F1** | Live search bar in the nav, with a hand-off to the assistant | Top of every page |
+| **F2** | Category tabs, filters (size in stock, color, price), and sorting | `/products` |
+| **B1** | Smarter search filters: one search engine for the site *and* the chat | Chat: "hoodies under $60 in M" |
+| **B2** | Alternatives when a size is sold out or nothing matches exactly | Chat: "this in large?" on a sold-out size |
 
 **Running it:** start the backend from `backend/` with `uvicorn main:app --reload --port 8000`, and the frontend from `frontend/` with `npm run dev`. Then open http://127.0.0.1:5173.
 
@@ -29,7 +29,6 @@ Four improvements: two on the front end and two in the agent and backend. Each s
 **Why it helps the business:** searchers are usually the most ready-to-buy visitors. A search that returns nothing is where a sale is usually lost, and the "ask the assistant" hand-off turns that dead end into a conversation with alternatives (B2) instead of a bounce.
 
 **See it:** type `navy hood` in the nav search, press Enter, then type `polo` and click "Ask our assistant".
-Screenshots: `F1_01_live_search_dropdown.png` · `F1_02_enter_shows_all_results.png` · `F1_03_no_match_offers_assistant.png` · `F1_04_assistant_answers_search_dead_end.png` · `F1_05_before_search_chat_picks_on_page.png` → `F1_06_search_replaces_chat_picks.png`
 
 ---
 
@@ -55,7 +54,6 @@ Screenshots: `F1_01_live_search_dropdown.png` · `F1_02_enter_shows_all_results.
 **Why it helps the business:** too much choice makes people *less* likely to buy. A short, relevant list makes deciding easy. Filtering by size-in-stock also stops disappointment at the last step, and the empty state hands shoppers to the assistant instead of letting them leave.
 
 **See it:** open Products, click **Hoodies**, then pick **M** under Size and **Gray** under Color. Change the sort to "Price: low to high" and pick a price range. Then visit `/products?category=hoodies&color=pink` for the empty state.
-Screenshots: `F2_01_category_tabs_and_filters.png` · `F2_02_hoodies_gray_in_stock_M.png` · `F2_03_sorted_price_and_url_filters.png` · `F2_04_empty_state.png` · `F2_05_empty_state_asks_assistant.png` · `F2_06_price_range_buckets.png`
 
 ---
 
@@ -90,7 +88,6 @@ Measured with the same 4 questions before and after (`scripts/measure_agent.py`,
 - **Categories and color families are rules we maintain.** A new garment type (e.g. "beanie") would land in "Other" until it's added. Three products have no colors in the database, so they don't show under any color filter.
 
 **See it:** in the chat, ask "Do you have hoodies under $60 in stock in medium?" or "Any navy crewnecks in XL?"
-Screenshots: `B1_01_filtered_question_one_search.png` · `B1_02_reports_what_filters_hid.png`
 
 ---
 
@@ -114,7 +111,6 @@ Screenshots: `B1_01_filtered_question_one_search.png` · `B1_02_reports_what_fil
 - **Offering substitutes could feel pushy.** The prompt makes the agent state the bad news first and keep alternatives short.
 
 **See it:** open the Fencing Left Chest Hoodie page, open the chat, and ask "Do you have this in large?" Then ask "Any pink hoodies?" and tap an alternative card.
-Screenshots: `B2_01_sold_out_size_alternatives.png` · `B2_02_no_exact_match_alternatives.png` · `B2_03_alternative_card_opens_product.png`
 
 ---
 

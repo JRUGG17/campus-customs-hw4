@@ -14,6 +14,7 @@ data/
 *.db-shm
 
 # ---- Rebuildable / local-only ----
+screenshots/
 venv/
 .venv/
 __pycache__/
