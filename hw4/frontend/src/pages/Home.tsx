@@ -75,7 +75,7 @@ export default function Home() {
             </p>
             <div className="hero-actions">
               <Link to="/products" className="btn btn-light">
-                Shop all 102 styles
+                Shop all
               </Link>
               <Link to="/about" className="btn btn-outline">
                 Our story
