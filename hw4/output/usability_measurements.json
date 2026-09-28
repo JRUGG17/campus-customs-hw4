@@ -1,0 +1,100 @@
+{
+  "before": [
+    {
+      "question": "Do you have hoodies under $60 in stock in medium?",
+      "model_requests": 3,
+      "tool_calls": 3,
+      "input_tokens": 9920,
+      "seconds": 7.6,
+      "tools_used": [
+        "check_size_stock",
+        "find_products",
+        "get_product_details"
+      ],
+      "sample_reply": "Yes\u2014 I found 2 hoodies under $60 with medium in stock, both $45.00: Ua Gameday Double Knit Hood (8 in M) and Yale Sports Hoodie Tennis (25 in M). They\u2019re shown "
+    },
+    {
+      "question": "Any navy crewnecks in XL?",
+      "model_requests": 3,
+      "tool_calls": 10,
+      "input_tokens": 13110,
+      "seconds": 10.2,
+      "tools_used": [
+        "check_size_stock",
+        "find_products",
+        "get_product_details"
+      ],
+      "sample_reply": "Yes\u20146 navy crewnecks are available in XL, all $58.00. The Diving, Grace Hopper, and Squash options have only 5 or fewer left; the matches are shown on the page "
+    },
+    {
+      "question": "What's the cheapest quarter-zip you have in stock in small?",
+      "model_requests": 3,
+      "tool_calls": 10,
+      "input_tokens": 14212,
+      "seconds": 11.4,
+      "tools_used": [
+        "find_products",
+        "get_product_details"
+      ],
+      "sample_reply": "The cheapest quarter-zips in Small are $72.00. The Benjamin Franklin 1/4 Zip is available in Small, with only 2 left; several other quarter-zips are also $72.00"
+    },
+    {
+      "question": "Show me gray t-shirts in XXL.",
+      "model_requests": 2.5,
+      "tool_calls": 7,
+      "input_tokens": 11022,
+      "seconds": 9.5,
+      "tools_used": [
+        "find_products",
+        "get_product_details"
+      ],
+      "sample_reply": "I found 16 gray T-shirts. Here are 10 confirmed available in XXL, all $32.00; the matches are shown on the page now. The basketball and hockey designs are sold "
+    }
+  ],
+  "after": [
+    {
+      "question": "Do you have hoodies under $60 in stock in medium?",
+      "model_requests": 2,
+      "tool_calls": 1,
+      "input_tokens": 8373,
+      "seconds": 4.9,
+      "tools_used": [
+        "find_products"
+      ],
+      "sample_reply": "I found 2 hoodies under $60 with medium in stock, both $45.00. The UA Gameday Double Knit Hood has 8 in M, and Yale Sports Hoodie Tennis has 25 in M. They\u2019re sh"
+    },
+    {
+      "question": "Any navy crewnecks in XL?",
+      "model_requests": 2,
+      "tool_calls": 1,
+      "input_tokens": 8799,
+      "seconds": 5.2,
+      "tools_used": [
+        "find_products"
+      ],
+      "sample_reply": "I found 6 navy crewnecks with XL in stock, all priced at $58.00. Three more navy crewnecks matched but are sold out in XL; the available options are shown on th"
+    },
+    {
+      "question": "What's the cheapest quarter-zip you have in stock in small?",
+      "model_requests": 2,
+      "tool_calls": 1,
+      "input_tokens": 8509,
+      "seconds": 6.1,
+      "tools_used": [
+        "find_products"
+      ],
+      "sample_reply": "The cheapest quarter-zips in stock in small are $72.00, with three tied options: Benjamin Franklin (2 in S), Berkeley (8 in S), and Branford (25 in S). They\u2019re "
+    },
+    {
+      "question": "Show me gray t-shirts in XXL.",
+      "model_requests": 2,
+      "tool_calls": 1,
+      "input_tokens": 9472,
+      "seconds": 5.5,
+      "tools_used": [
+        "find_products"
+      ],
+      "sample_reply": "I found 14 gray T-shirts with XXL in stock, all priced at $32.00. They\u2019re on the page now\u2014tap any one to see its full details and size stock."
+    }
+  ]
+}

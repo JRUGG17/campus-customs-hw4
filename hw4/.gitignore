@@ -1,0 +1,27 @@
+# ---- Never publish ----
+# Secrets: the real Portkey key lives in .env (only the placeholder .env.example is committed)
+.env
+.env.*
+!.env.example
+
+# The course data pack: the database and every product image, plus the zip it came in.
+# Unzip the pack into hw4/ yourself (see README) to get hw4/data/.
+data/
+*.zip
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# ---- Rebuildable / local-only ----
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+node_modules/
+dist/
+.vite/
+*.json.tmp
+output/audit_trail.unreadable-*.json
+.DS_Store
+Thumbs.db
