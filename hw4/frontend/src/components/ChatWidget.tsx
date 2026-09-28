@@ -97,7 +97,9 @@ export default function ChatWidget() {
   useEffect(() => {
     if (!request) return
     setOpen(true)
-    void send(request.text)
+    if (request.text) void send(request.text)
+    // No question: just open, with the cursor in the message box.
+    else setTimeout(() => document.querySelector<HTMLInputElement>('.chat-input input')?.focus(), 50)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [request])
 

@@ -44,7 +44,7 @@ const photo = (id: string) => `/media/products/${id}.jpg`
 export default function Home() {
   const [all, setAll] = useState<ProductSummary[]>([])
   const [counts, setCounts] = useState<Record<string, number>>({})
-  const { askAssistant } = useChatControl()
+  const { askAssistant, openAssistant } = useChatControl()
 
   useEffect(() => {
     fetchProducts().then(setAll).catch(() => setAll([]))
@@ -192,7 +192,7 @@ export default function Home() {
               <strong>57 Broadway, New Haven</strong>: a short walk from campus, with our print
               shop right next door. Can't make it? Our assistant knows every size on the shelf.
             </p>
-            <button className="btn btn-primary" onClick={() => askAssistant('What sizes do you have in stock for hoodies?')}>
+            <button className="btn btn-primary" onClick={openAssistant}>
               Ask the assistant
             </button>
           </div>

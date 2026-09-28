@@ -1,9 +1,10 @@
 import { createContext, useContext, useState, type ReactNode } from 'react'
 
-/** Lets any part of the site (search bar, empty filter results) hand a question to the chat. */
+/** Lets any part of the site open the chat, or hand it a question (search bar, empty results). */
 interface ChatControl {
-  request: { text: string; id: number } | null
+  request: { text: string; id: number } | null // text '' = just open the chat
   askAssistant: (text: string) => void
+  openAssistant: () => void
 }
 
 const ChatControlContext = createContext<ChatControl | null>(null)
@@ -11,8 +12,11 @@ const ChatControlContext = createContext<ChatControl | null>(null)
 export function ChatControlProvider({ children }: { children: ReactNode }) {
   const [request, setRequest] = useState<ChatControl['request']>(null)
   const askAssistant = (text: string) => setRequest({ text, id: Date.now() })
+  const openAssistant = () => setRequest({ text: '', id: Date.now() })
   return (
-    <ChatControlContext.Provider value={{ request, askAssistant }}>{children}</ChatControlContext.Provider>
+    <ChatControlContext.Provider value={{ request, askAssistant, openAssistant }}>
+      {children}
+    </ChatControlContext.Provider>
   )
 }
 
