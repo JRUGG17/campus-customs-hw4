@@ -5,6 +5,7 @@ import { ChatResultsProvider } from './chatResults'
 import ChatWidget from './components/ChatWidget'
 import Footer from './components/Footer'
 import NavBar from './components/NavBar'
+import ScrollToTop from './components/ScrollToTop'
 import About from './pages/About'
 import CreateAccount from './pages/CreateAccount'
 import Home from './pages/Home'
@@ -19,6 +20,7 @@ export default function App() {
       <ChatResultsProvider>
         <ChatControlProvider>
           <BrowserRouter>
+            <ScrollToTop />
             <NavBar />
             <main className="page">
               <Routes>

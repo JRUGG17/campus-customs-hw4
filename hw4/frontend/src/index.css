@@ -1039,6 +1039,9 @@ img {
 /* ---------- Product grid & cards ---------- */
 
 .product-grid {
+  /* When filters swap every card at once, Chrome's scroll anchoring loses its anchor and
+     snaps the page to the top. Opting the grid out keeps the shopper's place. */
+  overflow-anchor: none;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: 26px;
